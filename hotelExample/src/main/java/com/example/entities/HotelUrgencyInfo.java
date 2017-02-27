@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class HotelUrgencyInfo {
+	
 	private int airAttachRemainingTime;
 
 	private int numberOfPeopleViewing;

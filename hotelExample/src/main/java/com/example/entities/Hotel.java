@@ -17,13 +17,13 @@ public class Hotel {
 	
 	private HotelUrls hotelUrls;
 	
-	private HotelScores hotelScores;
+	private HotelScore hotelScores;
 	
 	
 	@JsonCreator
 	public Hotel(@JsonProperty("offerDateRange") OfferDateRange offerDateRange, @JsonProperty("destination") Destination destination, @JsonProperty("hotelInfo") HotelInfo hotelInfo,
 			@JsonProperty("hotelUrgencyInfo") HotelUrgencyInfo hotelUrgencyInfo, @JsonProperty("hotelPricingInfo") HotelPricingInfo hotelPricingInfo, @JsonProperty("hotelUrls") HotelUrls hotelUrls,
-			@JsonProperty("hotelScores") HotelScores hotelScores) {
+			@JsonProperty("hotelScores") HotelScore hotelScores) {
 		super();
 		this.offerDateRange = offerDateRange;
 		this.destination = destination;
@@ -82,11 +82,11 @@ public class Hotel {
 		this.hotelUrls = hotelUrls;
 	}
 
-	public HotelScores getHotelScores() {
+	public HotelScore getHotelScores() {
 		return this.hotelScores;
 	}
 
-	public void setHotelScores(HotelScores hotelScores) {
+	public void setHotelScores(HotelScore hotelScores) {
 		this.hotelScores = hotelScores;
 	}
 

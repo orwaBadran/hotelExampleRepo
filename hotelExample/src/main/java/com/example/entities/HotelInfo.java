@@ -31,6 +31,38 @@ public class HotelInfo {
 
 	private String travelStartDate;
 
+	private String travelEndDate;
+
+	private String hotelImageUrl;
+
+	private double carPackageScore;
+
+	private String description;
+
+	private double distanceFromUser;
+
+	private String language;
+
+	private double movingAverageScore;
+
+	private double promotionAmount;
+
+	private String promotionDescription;
+
+	private String promotionTag;
+
+	private double rawAppealScore;
+
+	private double relevanceScore;
+
+	private String statusCode;
+
+	private String statusDescription;
+
+	private boolean allInclusive;
+
+	private boolean carPackage;
+
 	public String getHotelId() {
 		return this.hotelId;
 	}
@@ -151,8 +183,6 @@ public class HotelInfo {
 		this.travelStartDate = travelStartDate;
 	}
 
-	private String travelEndDate;
-
 	public String getTravelEndDate() {
 		return this.travelEndDate;
 	}
@@ -160,8 +190,6 @@ public class HotelInfo {
 	public void setTravelEndDate(String travelEndDate) {
 		this.travelEndDate = travelEndDate;
 	}
-
-	private String hotelImageUrl;
 
 	public String getHotelImageUrl() {
 		return this.hotelImageUrl;
@@ -171,8 +199,6 @@ public class HotelInfo {
 		this.hotelImageUrl = hotelImageUrl;
 	}
 
-	private double carPackageScore;
-
 	public double getCarPackageScore() {
 		return this.carPackageScore;
 	}
@@ -180,8 +206,6 @@ public class HotelInfo {
 	public void setCarPackageScore(double carPackageScore) {
 		this.carPackageScore = carPackageScore;
 	}
-
-	private String description;
 
 	public String getDescription() {
 		return this.description;
@@ -191,8 +215,6 @@ public class HotelInfo {
 		this.description = description;
 	}
 
-	private double distanceFromUser;
-
 	public double getDistanceFromUser() {
 		return this.distanceFromUser;
 	}
@@ -200,8 +222,6 @@ public class HotelInfo {
 	public void setDistanceFromUser(double distanceFromUser) {
 		this.distanceFromUser = distanceFromUser;
 	}
-
-	private String language;
 
 	public String getLanguage() {
 		return this.language;
@@ -211,8 +231,6 @@ public class HotelInfo {
 		this.language = language;
 	}
 
-	private double movingAverageScore;
-
 	public double getMovingAverageScore() {
 		return this.movingAverageScore;
 	}
@@ -220,8 +238,6 @@ public class HotelInfo {
 	public void setMovingAverageScore(double movingAverageScore) {
 		this.movingAverageScore = movingAverageScore;
 	}
-
-	private double promotionAmount;
 
 	public double getPromotionAmount() {
 		return this.promotionAmount;
@@ -231,8 +247,6 @@ public class HotelInfo {
 		this.promotionAmount = promotionAmount;
 	}
 
-	private String promotionDescription;
-
 	public String getPromotionDescription() {
 		return this.promotionDescription;
 	}
@@ -240,8 +254,6 @@ public class HotelInfo {
 	public void setPromotionDescription(String promotionDescription) {
 		this.promotionDescription = promotionDescription;
 	}
-
-	private String promotionTag;
 
 	public String getPromotionTag() {
 		return this.promotionTag;
@@ -251,8 +263,6 @@ public class HotelInfo {
 		this.promotionTag = promotionTag;
 	}
 
-	private double rawAppealScore;
-
 	public double getRawAppealScore() {
 		return this.rawAppealScore;
 	}
@@ -260,8 +270,6 @@ public class HotelInfo {
 	public void setRawAppealScore(double rawAppealScore) {
 		this.rawAppealScore = rawAppealScore;
 	}
-
-	private double relevanceScore;
 
 	public double getRelevanceScore() {
 		return this.relevanceScore;
@@ -271,8 +279,6 @@ public class HotelInfo {
 		this.relevanceScore = relevanceScore;
 	}
 
-	private String statusCode;
-
 	public String getStatusCode() {
 		return this.statusCode;
 	}
@@ -280,8 +286,6 @@ public class HotelInfo {
 	public void setStatusCode(String statusCode) {
 		this.statusCode = statusCode;
 	}
-
-	private String statusDescription;
 
 	public String getStatusDescription() {
 		return this.statusDescription;
@@ -291,8 +295,6 @@ public class HotelInfo {
 		this.statusDescription = statusDescription;
 	}
 
-	private boolean allInclusive;
-
 	public boolean getAllInclusive() {
 		return this.allInclusive;
 	}
@@ -300,8 +302,6 @@ public class HotelInfo {
 	public void setAllInclusive(boolean allInclusive) {
 		this.allInclusive = allInclusive;
 	}
-
-	private boolean carPackage;
 
 	public boolean getCarPackage() {
 		return this.carPackage;

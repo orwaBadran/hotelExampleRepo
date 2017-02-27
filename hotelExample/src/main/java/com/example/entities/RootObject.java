@@ -5,7 +5,7 @@ public class RootObject {
 
 	private UserInfo userInfo;
 	
-	private Offers offers;
+	private Offer offers;
 
 	public OfferInfo getOfferInfo() {
 		return this.offerInfo;
@@ -23,16 +23,16 @@ public class RootObject {
 		this.userInfo = userInfo;
 	}
 
-	public Offers getOffers() {
+	public Offer getOffers() {
 		return this.offers;
 	}
 
-	public void setOffers(Offers offers) {
+	public void setOffers(Offer offers) {
 		this.offers = offers;
 	}
 
 	@Override
 	public String toString() {
-		return "RootObject [offerInfo=" + offerInfo + ", userInfo=" + userInfo + ", offers=" + offers + "]";
+		return "RootObject [offerInfo=" + offerInfo + ", userInfo=" + userInfo + ", offer=" + offers + "]";
 	}
 }
