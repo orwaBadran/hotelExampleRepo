@@ -16,7 +16,7 @@ public class HotelExampleApplicationTests {
 	@Test
 	public void contextLoads() {
 		try {
-			listResult.listResult();
+			//listResult.listResult();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -52,6 +52,52 @@
 
 			</div>
 		</div>
+		
+		<form method="get" id="paramsForm" action="/listResult">
+		<div class="col-lg-12 col-md-12 col-sm-12 ">
+			<div class="col-lg-3 col-md-3 col-sm-12">
+				Destination Name: <input type="text" name="destinationName" />
+			</div>
+			
+			<div class="col-lg-3 col-md-3 col-sm-12">
+				lengthOfStay: <input type="text" name="lengthOfStay" />
+			</div>
+			
+			<br/>
+			
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				Trip Start Date Range: ex:(2017-05-03)<br/> 
+				From :<input type="text" name="minTripStartDate" /> - To: <input type="text" name="maxTripStartDate" /> 
+			</div>
+			
+			<br/>
+			
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				Star Rating Range<br/> 
+				From :<input type="text" name="minStarRating" /> - To: <input type="text" name="maxStarRating" />
+			</div>
+			
+			<br/>
+			
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				Total Rating Range<br/> 
+				From :<input type="text" name="minTotalRate" /> - To: <input type="text" name="maxTotalRate" />
+			</div>
+			
+			<br/>
+			
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				Total Guest Rating Range<br/> 
+				From :<input type="text" name="minGuestRating" /> - To: <input type="text" name="maxGuestRating" />
+			</div>
+			
+			<br/>
+			
+			<button type="submit" class="btn btn-default btn-lg">
+			  <span class="glyphicon" aria-hidden="true"></span> Search
+			</button>
+		</div>
+		</form>
 
 		<div class="row pad-top  move-me wow bounceIn animated">
 			<c:forEach items="${root.offers.hotel}" var="hotels">
@@ -139,7 +185,7 @@
 									</div>
 									<div class="panel-body">
 										<ul>
-											<li>false</li>
+											<li>${hotels.hotelUrgencyInfo.airAttachEnabled}</li>
 										</ul>
 									</div>
 								</div>
@@ -149,19 +195,18 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">Hotel Pricing Info</h3>
-
 									</div>
+									
 									<div class="panel-body scrollable">
 										<ul>
-											<li>Average Price Value:43.79,</li>
-											<li>Total Price Value:144.51,</li>
-											<li>Original Price Per Night:48.96,</li>
-											<li>Hotel Total Base Rate:146.88,</li>
-											<li>Hotel Total Taxes And Fees:13.14,</li>
-											<li>Currency:USD,</li>
-											<li>Hotel Total Mandatory Taxes And Fees:0.0,</li>
-											<li>Percent Savings:10.56,</li>
-											<li>drr:true</li>
+											<li>Average Price Value: ${hotels.hotelPricingInfo.averagePriceValue}</li>
+											<li>Total Price Value: ${hotels.hotelPricingInfo.totalPriceValue}</li>
+											<li>Original Price Per Night: ${hotels.hotelPricingInfo.originalPricePerNight}</li>
+											<li>Hotel Total Base Rate: ${hotels.hotelPricingInfo.hotelTotalBaseRate}</li>
+											<li>Hotel Total Taxes And Fees: ${hotels.hotelPricingInfo.hotelTotalTaxesAndFees}</li>
+											<li>Currency: ${hotels.hotelPricingInfo.currency}</li>
+											<li>Hotel Total Mandatory Taxes And Fees: ${hotels.hotelPricingInfo.hotelTotalMandatoryTaxesAndFees}</li>
+											<li>Percent Savings: ${hotels.hotelPricingInfo.percentSavings}</li>
 										</ul>
 									</div>
 								</div>
@@ -175,11 +220,10 @@
 									</div>
 									<div class="panel-body ">
 										<ul>
-											<li><a
-												href="http%3A%2F%2Fdeals.expedia.com%2Fbeta%2Fhotel_redirect%3Fgde_deep_link%3Dhttp%25253A%25252F%25252Fwww.expedia.com%25252Fgo%25252Fhotel%25252Finfo%25252F5065557%25252F2017-03-28%25252F2017-03-31%25253FNumRooms%25253D1%252526NumAdult-Room1%25253D2%252526rateplanid%25253D200976871_24%252526tpid%25253D1%252526langid%25253D1033%26gde_index%3D0%26gde_hash%3D655a19432827c5d63e6e21a9d5e46535%26gde_type%3DHotel%26gde_hotel%3Dtrue%26gde_hotel_id%3D5065557%26gde_check_in_date%3D2017-03-28%26gde_check_out_date%3D2017-03-31%26gde_price%3D144.51">hotel
-													Info site</a></li>
-											<li><a
-												href=" http%3A%2F%2Fdeals.expedia.com%2Fbeta%2Fhotel_redirect%3Fgde_deep_link%3Dhttp%25253A%25252F%25252Fwww.expedia.com%25252Fpubspec%25252Fscripts%25252Feap.asp%25253FGOTO%25253DHOTSEARCH%252526SearchType%25253DPlace%252526PlaceName%25253DValencia%25252C%252BValencia%25252C%252BESP%252526InDate%25253D3%25252F28%25252F17%252526OutDate%25253D3%25252F31%25252F17%252526langid%25253D1033%26gde_index%3D0%26gde_hash%3D655a19432827c5d63e6e21a9d5e46535%26gde_type%3DHotel%26gde_hotel%3Dtrue%26gde_hotel_id%3D5065557%26gde_check_in_date%3D2017-03-28%26gde_check_out_date%3D2017-03-31%26gde_price%3D144.51">hotel
+											<li>
+												<a href="http%3A%2F%2Fdeals.expedia.com%2Fbeta%2Fhotel_redirect%3Fgde_deep_link%3Dhttp%25253A%25252F%25252Fwww.expedia.com%25252Fgo%25252Fhotel%25252Finfo%25252F5065557%25252F2017-03-28%25252F2017-03-31%25253FNumRooms%25253D1%252526NumAdult-Room1%25253D2%252526rateplanid%25253D200976871_24%252526tpid%25253D1%252526langid%25253D1033%26gde_index%3D0%26gde_hash%3D655a19432827c5d63e6e21a9d5e46535%26gde_type%3DHotel%26gde_hotel%3Dtrue%26gde_hotel_id%3D5065557%26gde_check_in_date%3D2017-03-28%26gde_check_out_date%3D2017-03-31%26gde_price%3D144.51">
+												hotel Info site</a></li>
+											<li><a href=" http%3A%2F%2Fdeals.expedia.com%2Fbeta%2Fhotel_redirect%3Fgde_deep_link%3Dhttp%25253A%25252F%25252Fwww.expedia.com%25252Fpubspec%25252Fscripts%25252Feap.asp%25253FGOTO%25253DHOTSEARCH%252526SearchType%25253DPlace%252526PlaceName%25253DValencia%25252C%252BValencia%25252C%252BESP%252526InDate%25253D3%25252F28%25252F17%252526OutDate%25253D3%25252F31%25252F17%252526langid%25253D1033%26gde_index%3D0%26gde_hash%3D655a19432827c5d63e6e21a9d5e46535%26gde_type%3DHotel%26gde_hotel%3Dtrue%26gde_hotel_id%3D5065557%26gde_check_in_date%3D2017-03-28%26gde_check_out_date%3D2017-03-31%26gde_price%3D144.51">hotel
 													Search Result:</a></li>
 										</ul>
 									</div>
@@ -195,8 +239,8 @@
 									</div>
 									<div class="panel-body ">
 										<ul>
-											<li>Raw Appeal Score:43.79,</li>
-											<li>Moving Average Score:-0.91</li>
+											<li>Raw Appeal Score: ${hotels.hotelScores.rawAppealScore}</li>
+											<li>Moving Average Score: ${hotels.hotelScores.movingAverageScore}</li>
 										</ul>
 
 									</div>
