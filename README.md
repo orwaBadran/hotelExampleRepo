@@ -9,8 +9,8 @@ Anyone needs to understand and review the code must have knowledge mentioned tec
 You can download spring boot and follow the instructions for installation from <a href ="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-installing-the-cli">here</a>
 
 After Installtion you will only need navigate to the project home folder (ex:-hotelExample; the folder that contaons the pom) and run the following command:
-  mvnw.cmd spring-boot:run    (for windowes)
-  mvnw spring-boot:run        (for *nix enviroments)
+  <li>mvnw.cmd spring-boot:run    (for windowes)</li>
+  <li>mvnw spring-boot:run        (for *nix enviroments)</li>
   
 Also the project contains test case to run and seet the result, run the following:
    mvnw.cmd test    (for windowes)
