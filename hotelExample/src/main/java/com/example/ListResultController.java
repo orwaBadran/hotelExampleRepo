@@ -28,8 +28,6 @@ public class ListResultController {
 				+ (!maxTotalRate.isEmpty() ? "&maxTotalRate=" + maxTotalRate : "") + (!minTotalRate.isEmpty() ? "&minTotalRate=" + minTotalRate : "")
 				+ (!minGuestRating.isEmpty() ? "&minGuestRating=" + minGuestRating : "") + (!maxGuestRating.isEmpty() ? "&maxGuestRating=" + maxGuestRating : "");
 		
-		System.out.println(params);
-
 		RootObject rootObject = restTemplate.getForObject(
 				"https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel" + params,
 				RootObject.class);
