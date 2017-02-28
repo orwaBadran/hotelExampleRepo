@@ -13,5 +13,5 @@ After Installtion you will only need navigate to the project home folder (ex:-ho
   <li>mvnw spring-boot:run        (for *nix enviroments)</li>
   
 Also the project contains test case to run and seet the result, run the following:
-   mvnw.cmd test    (for windowes)
-   mvnw test        (for *nix enviroments)
+   <li>mvnw.cmd test    (for windowes)</li>
+   <li>mvnw test        (for *nix enviroments)</li>
