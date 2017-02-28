@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.example.entities.RootObject;
 import com.example.service.OfferService;
 
 @RunWith(SpringRunner.class)
@@ -19,7 +20,7 @@ public class HotelExampleApplicationTests {
 	@Test
 	public void contextLoads() {
 
-		com.example.entities.rootObject rootObject = OfferService.retrieveRootObject("", "", "", "", "", "", "", "", "", "");
+		RootObject rootObject = OfferService.retrieveRootObject("", "", "", "", "", "", "", "", "", "");
 		
 		Assert.assertNotNull(rootObject.toString(), rootObject);
 	}

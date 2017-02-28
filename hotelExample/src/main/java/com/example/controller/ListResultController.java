@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.entities.rootObject;
+import com.example.entities.RootObject;
 import com.example.service.OfferService;
 
 @Controller
@@ -27,7 +27,7 @@ public class ListResultController {
 			@RequestParam(required = false, defaultValue = "") String minGuestRating,
 			@RequestParam(required = false, defaultValue = "") String maxGuestRating) {
 
-		rootObject rootObject = offerService.retrieveRootObject(destinationName, lengthOfStay, minTripStartDate,
+		RootObject rootObject = offerService.retrieveRootObject(destinationName, lengthOfStay, minTripStartDate,
 				maxTripStartDate, minStarRating, maxStarRating, minTotalRate, maxTotalRate, minGuestRating,
 				maxGuestRating);
 

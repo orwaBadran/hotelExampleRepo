@@ -1,6 +1,6 @@
 package com.example.entities;
 
-public class rootObject {
+public class RootObject {
 	private OfferInfo offerInfo;
 
 	private UserInfo userInfo;

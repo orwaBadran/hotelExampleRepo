@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.entities.rootObject;
+import com.example.entities.RootObject;
 
 @Service
 public class OfferService {
@@ -30,7 +30,7 @@ public class OfferService {
 	 */
 	
 	@Transactional
-	public rootObject retrieveRootObject(String destinationName, String lengthOfStay, String minTripStartDate,
+	public RootObject retrieveRootObject(String destinationName, String lengthOfStay, String minTripStartDate,
 			String maxTripStartDate, String minStarRating, String maxStarRating, String minTotalRate,
 			String maxTotalRate, String minGuestRating, String maxGuestRating) {
 		
@@ -40,9 +40,9 @@ public class OfferService {
 				+ (!maxTotalRate.isEmpty() ? "&maxTotalRate=" + maxTotalRate : "") + (!minTotalRate.isEmpty() ? "&minTotalRate=" + minTotalRate : "")
 				+ (!minGuestRating.isEmpty() ? "&minGuestRating=" + minGuestRating : "") + (!maxGuestRating.isEmpty() ? "&maxGuestRating=" + maxGuestRating : "");
 		
-		rootObject rootObject = restTemplate.getForObject(
+		RootObject rootObject = restTemplate.getForObject(
 				"https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel" + params,
-				rootObject.class);
+				RootObject.class);
 		
 		return rootObject;
 	}
